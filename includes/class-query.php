@@ -7,7 +7,18 @@
             public function all_posts(){
                 global $db;
                 
-                return $db->select();
+                $query = "SELECT * FROM posts";
+                
+                return $db->select($query);
+            }
+            
+            public function post($post_id){
+                
+                global $db;
+                
+                $query = "SELECT * from posts where id='$post_id'";
+                
+                return $db->select($query);
             }
         } 
     }
