@@ -30,7 +30,11 @@
                     $results[] = $obj;
                 }
                 
-                return $results;
+                if (isset($results)){
+                    return $results;
+                } else {
+                    return;
+                }
             }
             
         }

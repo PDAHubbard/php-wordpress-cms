@@ -4,6 +4,8 @@
 	
 	if (!empty($_POST)){
 	    require_once('../includes/class-insert.php');
+	    require_once('../includes/class-query.php');
+	    print_r($query->post('19'));
 	    if ($insert->post($_POST)){
 	        echo '<p>Data inserted successfully.</p>';
 	    }
