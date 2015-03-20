@@ -22,10 +22,15 @@
                 return $result;
             }
             
-            public function select(){
-                $query = "SELECT * FROM posts";
+            public function select($query){
                 
                 $result = $this->connection->query($query);
+                
+                while ($obj = $result->fetch_object()) {
+                    $results[] = $obj;
+                }
+                
+                return $results;
             }
             
         }
